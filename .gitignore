@@ -4,13 +4,13 @@
 /node_modules
 /.pnp
 .pnp.js
+src/secret.js
 
 # testing
 /coverage
 
 # production
 /build
-secrets.js
 
 # misc
 .DS_Store
