@@ -1,6 +1,12 @@
 .card {
     height: 200px !important;
-    width: 150px;
+    width: 150px !important;
     background-color: #000000 !important;
     margin-right: 15px;
+}
+
+.card > img {
+    height: 200px !important;
+    width: 150px !important;
+    object-fit: cover;
 }

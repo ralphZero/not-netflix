@@ -7,17 +7,24 @@ import Button from 'react-bootstrap/Button';
 import './Hero.css';
 import MovieCard from './MovieCard';
 
-const Hero = () => {
+const Hero = ({ movies }) => {
+    const random = Math.floor(Math.random() * movies.length);
+    const firstMovie = movies[random];
+
+    const movieItems = movies.map((movie, index) => (
+        index === 0 ? <MovieCard key={movie.id} poster={movie.poster_path} margins={'ms-xs-2 ms-md-4 ms-lg-5'} /> : <MovieCard key={movie.id} poster={movie.poster_path} />
+    ));
+
     return (
         <Container fluid className='hero d-flex flex-column'>
             <Container fluid className='flex-grow-1 p-0'>
                 <Row className='h-100'>
                     <Col xs={12} md={7} xl={6}>
                         <Container fluid className='h-100 d-flex flex-column justify-content-center px-xs-2 px-md-4 px-lg-5'>
-                            <h1 className=' display-1 lh-1 fw-bolder text-light'>Thor: Love and Thunder</h1>
+                            <h1 className=' display-1 lh-1 fw-bolder text-light'>{firstMovie.title}</h1>
                             <div className='d-flex gap-3 fs-6 fw-bold text-light my-4'>
-                                <span className=''>98% Votes</span>
-                                <span>2022</span>
+                                <span className=''>{Number(firstMovie.vote_average) * 10}% Votes</span>
+                                <span>{firstMovie.release_date.split('-')[0]}</span>
                             </div>
                             <div class="d-md-block">
                                 <Button variant='danger' className='rounded-pill cta-btn me-3'>Play</Button>
@@ -32,26 +39,10 @@ const Hero = () => {
                 </Row>
             </Container>
             <div>
-            <Container fluid className="px-xs-2 px-md-4 px-lg-5 mb-3 fw-bold text-white">NOW PLAYING</Container>
-            <Container fluid className="movie-container px-0 pb-2">
-                <MovieCard margins={'ms-xs-2 ms-md-4 ms-lg-5'} />
-                <MovieCard />
-                <MovieCard />
-                <MovieCard />
-                <MovieCard />
-                <MovieCard />
-                <MovieCard />
-                <MovieCard />
-                <MovieCard />
-                <MovieCard />
-                <MovieCard />
-                <MovieCard />
-                <MovieCard />
-                <MovieCard />
-                <MovieCard />
-                <MovieCard />
-                <MovieCard />
-            </Container>
+                <Container fluid className="px-xs-2 px-md-4 px-lg-5 mb-3 fw-bold text-white">NOW PLAYING</Container>
+                <Container fluid className="movie-container px-0 pb-2">
+                    {movieItems}
+                </Container>
             </div>
         </Container>
     );
