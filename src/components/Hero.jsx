@@ -10,13 +10,14 @@ import MovieCard from './MovieCard';
 const Hero = ({ movies }) => {
     const random = Math.floor(Math.random() * movies.length);
     const firstMovie = movies[random];
+    const heroStyle = { backgroundImage: `url('https://image.tmdb.org/t/p/original${firstMovie.backdrop_path}')`};
 
     const movieItems = movies.map((movie, index) => (
         index === 0 ? <MovieCard key={movie.id} poster={movie.poster_path} margins={'ms-xs-2 ms-md-4 ms-lg-5'} /> : <MovieCard key={movie.id} poster={movie.poster_path} />
     ));
 
     return (
-        <Container fluid className='hero d-flex flex-column'>
+        <Container style={heroStyle} fluid className='hero d-flex flex-column'>
             <Container fluid className='flex-grow-1 p-0'>
                 <Row className='h-100'>
                     <Col xs={12} md={7} xl={6}>

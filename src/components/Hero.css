@@ -2,8 +2,7 @@
   padding-top: 4em;
   margin: 0;
   height: 100vh;
-  background: url("https://image.tmdb.org/t/p/original/p1F51Lvj3sMopG948F5HsBbl43C.jpg")
-    no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0px -250px 9vw rgba(0, 0, 0);
 }
