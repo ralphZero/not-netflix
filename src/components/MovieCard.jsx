@@ -1,9 +1,9 @@
 import React from 'react';
 import './MovieCard.css';
 
-const MovieCard = () => {
+const MovieCard = ({ margins }) => {
     return (
-        <div className="d-inline-block card mx-2">
+        <div className={"d-inline-block card "+margins}>
             
         </div>
     );

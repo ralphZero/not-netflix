@@ -1,32 +1,52 @@
 .hero {
-    padding-top: 4em;
-    margin: 0;
-    height: 100vh;
-    background: url('https://image.tmdb.org/t/p/original/p1F51Lvj3sMopG948F5HsBbl43C.jpg') no-repeat;
-    background-size: cover;
-    box-shadow: inset 0px -250px 9vw rgba(0, 0, 0);
+  padding-top: 4em;
+  margin: 0;
+  height: 100vh;
+  background: url("https://image.tmdb.org/t/p/original/p1F51Lvj3sMopG948F5HsBbl43C.jpg")
+    no-repeat;
+  background-size: cover;
+  box-shadow: inset 0px -250px 9vw rgba(0, 0, 0);
 }
 
 .add-btn {
-    width: 38px;
-    height: 38px;
-    display: inline-flex !important;
-    justify-content: center;
-    align-items: center;
+  width: 38px;
+  height: 38px;
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
 }
 
 .cta-btn {
-    width: 10rem !important;
-    background-color: #E50914;
-    text-transform: uppercase;
-    font-weight: bold !important;
+  width: 10rem !important;
+  background-color: #e50914;
+  text-transform: uppercase;
+  font-weight: bold !important;
 }
 
 .movie-container {
-    white-space: nowrap;
-    overflow-x: auto;
+  white-space: nowrap;
+  overflow-x: overlay;
 }
 
-.movie-container:nth-child(0) {
-    padding-left: 15%;
+.movie-container::-webkit-scrollbar {
+  display: block;
+  width: 16px;
+}
+
+.movie-container::-webkit-scrollbar-button {
+  display: none;
+}
+
+.movie-container::-webkit-scrollbar-track {
+  background-color: #00000000;
+}
+
+.movie-container::-webkit-scrollbar-track-piece {
+  background-color: #00000000;
+}
+
+.movie-container::-webkit-scrollbar-thumb {
+  background-color: #00000040;
+  border: 1px solid #ffffff40;
+  border-radius: 24px;
 }

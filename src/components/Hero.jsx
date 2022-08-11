@@ -10,10 +10,10 @@ import MovieCard from './MovieCard';
 const Hero = () => {
     return (
         <Container fluid className='hero d-flex flex-column'>
-            <Container className='flex-grow-1 p-0'>
+            <Container fluid className='flex-grow-1 p-0'>
                 <Row className='h-100'>
                     <Col xs={12} md={7} xl={6}>
-                        <Container className='h-100 d-flex flex-column justify-content-center'>
+                        <Container fluid className='h-100 d-flex flex-column justify-content-center px-xs-2 px-md-4 px-lg-5'>
                             <h1 className=' display-1 lh-1 fw-bolder text-light'>Thor: Love and Thunder</h1>
                             <div className='d-flex gap-3 fs-6 fw-bold text-light my-4'>
                                 <span className=''>98% Votes</span>
@@ -32,9 +32,9 @@ const Hero = () => {
                 </Row>
             </Container>
             <div>
-            <Container>Now playing</Container>
-            <Container fluid className='movie-container pb-2'>
-                <MovieCard />
+            <Container fluid className="px-xs-2 px-md-4 px-lg-5 mb-3 fw-bold text-white">NOW PLAYING</Container>
+            <Container fluid className="movie-container px-0 pb-2">
+                <MovieCard margins={'ms-xs-2 ms-md-4 ms-lg-5'} />
                 <MovieCard />
                 <MovieCard />
                 <MovieCard />
