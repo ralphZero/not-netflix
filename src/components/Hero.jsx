@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
 import './Hero.css';
+import MovieCard from './MovieCard';
 
 const Hero = () => {
     return (
@@ -30,9 +31,28 @@ const Hero = () => {
                     </Col>
                 </Row>
             </Container>
-            <Container className='bg-primary'>
-                Movie cards
+            <div>
+            <Container>Now playing</Container>
+            <Container fluid className='movie-container pb-2'>
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
             </Container>
+            </div>
         </Container>
     );
 }

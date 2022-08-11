@@ -21,3 +21,12 @@
     text-transform: uppercase;
     font-weight: bold !important;
 }
+
+.movie-container {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.movie-container:nth-child(0) {
+    padding-left: 15%;
+}
