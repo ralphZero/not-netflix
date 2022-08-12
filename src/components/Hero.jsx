@@ -13,7 +13,7 @@ const Hero = ({ movies }) => {
     const heroStyle = { backgroundImage: `url('https://image.tmdb.org/t/p/original${firstMovie.backdrop_path}')`};
 
     const movieItems = movies.map((movie, index) => (
-        index === 0 ? <MovieCard key={movie.id} poster={movie.poster_path} margins={'ms-xs-2 ms-md-4 ms-lg-5'} /> : <MovieCard key={movie.id} poster={movie.poster_path} />
+        index === 0 ? <MovieCard key={movie.id} movie={movie} margins={'ms-xs-2 ms-md-4 ms-lg-5'} /> : <MovieCard key={movie.id} movie={movie} />
     ));
 
     return (
@@ -39,12 +39,12 @@ const Hero = ({ movies }) => {
                     </Col>
                 </Row>
             </Container>
-            <div>
+            <>
                 <Container fluid className="px-xs-2 px-md-4 px-lg-5 mb-3 fw-bold text-white">NOW PLAYING</Container>
                 <Container fluid className="movie-container px-0 pb-2">
                     {movieItems}
                 </Container>
-            </div>
+            </>
         </Container>
     );
 }
